@@ -502,7 +502,7 @@
     const card = frame.closest('.video-card');
     const id = card.dataset.video;
     if (!id) return; // empty placeholder slot, nothing to play yet
-    window.open(`https://www.youtube.com/watch?v=${id}`, '_blank', 'noopener');
+    frame.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1" title="video" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
   }
 </script>
 </body>
